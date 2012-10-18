@@ -1,0 +1,608 @@
+/* 
+ * HTML5 ✰ Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #4f5050; text-decoration: none }
+a:visited { color: #4f5050; }
+a:hover { color: #4f5050; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+@font-face {  src: url('BebasNeue.otf'); font-family: "Bebas-neue"; } 
+
+h1, h2, h3, h4, h5, h6, a {
+	font-family: "Bebas-neue", helvetica, arial, sans-serif;
+	color: #4f5050;
+	text-shadow: 	0 1px 1px rgba(255, 255, 255, 0.7), 0 -1px 0 rgba(0, 0 , 0, 0.5);
+	-webkit-text-shadow: 1px 1px 4px blue;
+	font-weight:normal;
+	margin: 0;
+}
+h1 {position:absolute; left: -9999px; text-shadow: 	0 3px 2px white, 0 -3px 0 rgba(0, 0 , 0, 0.7);}
+h2 {font-size: 77px; line-height:64px;}
+h3 {font-size: 30px; line-height:30px;}
+h4 {font-size: 26px; line-height: 23px;}
+h5, a {font-size: 20px; line-height:20px; margin-bottom:6px;}
+
+p, .lt-1 li, .lt-2 li, .lt-3 li {
+	font-family: helvetica, arial, sans-serif;
+	color: #4f5050;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+em.no{color:#ba3e30; font-style: normal;}
+em.yes{color:#36c8ce;font-style: normal;}
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+
+table button, table input { *overflow: auto; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+
+
+.clearfloat {
+clear:both;
+}
+body {
+	background-color:#ddd;
+	background-image: url('../images/bg1.png');
+	width:100%;
+}
+
+.container {width:100%;}
+.containerContent {
+	width:960px;
+	margin: 0 auto;
+}
+
+.container.header {
+	height:428px;
+	background: url('../images/header_bg.jpg') center 50% no-repeat #ccc;
+	background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+      
+        
+header {height:428px;}
+
+#logo {
+	height:282px; width:423px;
+	background: url('../images/logo.png');
+	position: relative;
+	top: 64px;
+	left: 80px;
+}
+
+nav {
+	width:340px; height:0;
+	position:relative;
+	top:-30px; left: 568px;
+}
+
+nav ul {
+    background: url("../images/quickBox.png") no-repeat scroll 0 -186px transparent;
+    height: 242px;
+    padding: 56px 0 24px 34px;
+    width: 325px;
+}
+
+nav h5 {
+  left: 195px;
+  padding: 12px 0 12px 19px;
+  position: relative;
+  top: -43px;
+  width: 134px;
+  background:url("../images/quickLinks_sprite.png") no-repeat scroll 102px 8px transparent;
+  margin: -20px 0 0;
+}
+
+nav li {
+	display:block;
+	width:130px;
+	margin:0 20px 10px 0;
+	float: left;
+}
+
+  nav li a:hover {
+    color: #36c8ce;
+  }
+
+.container.intro {
+  background: url('../images/jagged_bg.png') 0 top repeat-x transparent;
+  margin-top: -12px;
+}
+
+#intro {
+ padding: 44px 30px;
+ margin-bottom:30px;
+}
+
+#introContent {
+  width: 620px;
+  float:left;
+}
+
+.containerContent.answers a.homeButton, #introContent a.homeButton {
+  box-shadow: inset 0 0 3px #777;
+  float:left;
+  border: 2px solid;
+  border-radius: 5px;
+  padding:14px 20px;
+}
+
+#introContent a.homeButton {
+  display: block;
+  width: 180px;
+  font-size: 26px;
+  border-color: #36c8ce;
+  background: url('../images/bg2_blue.png') #36c8ce;
+  margin-top: 30px;
+}
+
+#introContent a.homeButton:hover, .containerContent.answers a.homeButton:hover {box-shadow: inset 0 0 5px rgba(50, 50, 50, 0.7);}
+#introContent a.homeButton:active, .containerContent.answers a.homeButton:active {box-shadow: inset 0 0 6px rgba(10, 10, 10, 0.7);}
+
+.social {
+  width: 320px;
+  margin-left: 60px;
+  float:left;
+  margin-bottom: 40px;
+  margin-top:30px;
+}
+/*.social a {
+  display: block;
+  width:70px;
+  height: 55px;
+  float:left;
+  margin-top: 20px;
+  margin-right: 46px;
+} */
+  .social a.last {margin-right:0;}
+  .social .facebook {background: url('../images/icon_facebook.png') no-repeat 0 2px transparent;}
+  .social .facebook:hover {background: url('../images/icon_facebook.png') no-repeat 0 -68px transparent;}
+  .social .twitter {background: url('../images/icon_twitter.png') no-repeat 0 -2px transparent;}
+  .social .twitter:hover {background: url('../images/icon_twitter.png') no-repeat 0 -71px transparent;}
+  .social .reddit {background: url('../images/icon_reddit.png') no-repeat 0 -2px transparent;}
+  .social .reddit:hover {background: url('../images/icon_reddit.png') no-repeat 0 -72px transparent;}
+  
+  div.fb-like {
+    margin: 24px;
+    width: 50px;
+    float: left;
+  }
+  
+  .twitter-share-button {
+    margin: 20px 23px;
+    position:relative;
+    top: 3px;
+    width:55px;
+    float:left;
+  }
+  
+  .googlePlus {
+    margin:21px 0 0 37px;
+    float: left;
+  }
+
+div#rightAds {
+  width:250px;
+  float:left;
+  margin-left:16px;
+}
+div.adspace-1 {
+  height:250px; width:250px;
+}
+
+div.adspace-2 {
+  height:60px; width:234px;
+  margin-top:14px;
+}
+
+.container.question, .container.footer {
+  background: url('../images/bg1_white.png') white;
+}
+
+#questions {
+  height: 800px;
+  padding: 0;
+}
+
+.container.question:before, .container.question:after, .container.footer:before {
+  content: " ";
+  display: block;
+  height:9px;
+}
+
+.container.question:before, .container.footer:before {background: url('../images/jagged_sprite.png') transparent repeat-x 0 -10px;}
+.container.question:after {background: url('../images/jagged_sprite.png') transparent repeat-x 0 1px;}
+
+#questions h2 {
+  width:340px;
+  text-align: center;
+  display:block;
+  position:relative;
+  top:308px;
+  left:360px;
+}
+#questions ul {margin:0;}
+#questions li {display:block; height:0px; position:relative; width:0;}
+#questions a {display:block;height: 250px; width:330px;position:relative;}
+#questions li a span {width:180px; display:block; position:relative; text-align:center;}
+#questions #bubble-1 {top:-100px; left:70px;}
+#questions #bubble-1 span {top:98px; left:66px;}
+#questions #bubble-1 a {background:url('../images/bubble1.png') 0 10px transparent no-repeat; height: 240px;}
+#questions #bubble-1 a:hover {background:url('../images/bubble1.png') 0px -220px transparent no-repeat; height: 240px;}
+#questions #bubble-1 a:active {background:url('../images/bubble1.png') 0px -480px transparent no-repeat; height: 240px;}
+#questions #bubble-2 {top:-100px; left:540px;}   
+#questions #bubble-2 span{top:100px; left:80px;}                                                                              
+#questions #bubble-2 a {background:url('../images/bubble2.png') 0 0 transparent no-repeat; height: 240px;}
+#questions #bubble-2 a:hover {background:url('../images/bubble2.png') 0 -280px transparent no-repeat; height: 240px;}
+#questions #bubble-2 a:active {background:url('../images/bubble2.png') 0 -550px transparent no-repeat; height: 240px;}
+#questions #bubble-3 {top:170px; left:-40px;}   
+#questions #bubble-3 span {top:76px; left:67px;}                                                                                  
+#questions #bubble-3 a {background:url('../images/bubble3.png') 0 8px transparent no-repeat; height: 220px; width:350px;}
+#questions #bubble-3 a:hover {background:url('../images/bubble3.png') 0 -222px transparent no-repeat; height: 220px; width:350px;}
+#questions #bubble-3 a:active {background:url('../images/bubble3.png') 0 -472px transparent no-repeat; height: 220px; width:350px;}
+#questions #bubble-4 {top:150px; left:610px;}    
+#questions #bubble-4 span {top:79px; left:95px;}                                                                    
+#questions #bubble-4 a {background:url('../images/bubble4.png') 0 0 transparent no-repeat; height: 205px;width:330px;}
+#questions #bubble-4 a:hover {background:url('../images/bubble4.png') 0 -300px transparent no-repeat; height: 205px;width:330px;}
+#questions #bubble-4 a:active {background:url('../images/bubble4.png') 0 -560px transparent no-repeat; height: 205px;width:330px;}
+#questions #bubble-5 {top:330px; left:290px;}
+#questions #bubble-5 span  {top:132px; left:80px;}                                                   
+#questions #bubble-5 a {background:url('../images/bubble5.png') 0 -30px transparent no-repeat; height: 275px; width:320px;}
+#questions #bubble-5 a:hover {background:url('../images/bubble5.png') 0 -350px transparent no-repeat; height: 275px; width:320px;}
+#questions #bubble-5 a:active {background:url('../images/bubble5.png') 0 -690px  transparent no-repeat; height: 275px; width:320px;}
+#questions #bubble-6 {top:370px; left:510px;}   
+#questions #bubble-6 span {top:86px; left:58px;}                                                                                 
+#questions #bubble-6 a {background:url('../images/bubble6.png') -30px 0 transparent no-repeat; height: 240px; width:302px;}
+#questions #bubble-6 a:hover {background:url('../images/bubble6.png') -30px -270px transparent no-repeat; height: 240px; width:302px;}
+#questions #bubble-6 a:active {background:url('../images/bubble6.png') -30px -560px transparent no-repeat; height: 240px; width:302px;}
+
+.containerContent.answers {padding: 50px 0 40px 130px;}
+
+.containerContent.answers p {width: 580px;}
+
+.containerContent.answers a.homeButton {
+  padding: 8px 20px;
+  background: url('../images/bg2_grey.png') 0 0 transparent;
+  border-color: #d4d5d6;
+  margin: 20px 0 40px;
+  float:right;
+}
+
+article {clear:both; width:660px;}
+.containerContent article.answer-5 p {width:326px; float:left;}
+.containerContent article.answer-5 h3 {margin-bottom: 12px;}
+.containerContent article.answer-5 img {
+  width:290px; height:240px; 
+  float:left;
+  border: 6px solid rgba(190, 190, 190, 0.35);
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  margin: 12px 0 0 30px;
+  }
+  
+.imgOverlay {
+  background-color: rgba(0, 0 , 0, 0.15);
+  height: 240px;
+  left: 361px;
+  position: relative;
+  top: 18px;
+  width: 290px;
+  display:none;
+}
+
+.imgOverlay h5 {
+    left: 88px;
+    position: relative;
+    top: -162px;
+}
+
+.lt-1 {padding-left:20px;}
+.lt-1 li, .lt-2 li, .lt-3 li {
+  display:block;
+  clear:both;
+  margin-top:20px;
+  min-height: 36px;
+}
+
+.lt-1 li h5.listNumber {
+  padding:7px 0 0 19px;
+  display:block;
+  height:29px;width:27px;
+  background:url('../images/listbubble.png') left top no-repeat;
+  float:left;
+  color: #ccc;
+  text-shadow: 0 0 1px #333;
+}
+
+.lt-1 li span, .lt-2 span {
+  display:block;
+  float:left;
+  padding: 8px 0 0 20px;
+  width: 470px;
+  }
+  
+.lt-1 li span h5 {margin: 0 0 12px 0;}
+
+.lt-2 span {width: 235px;}
+.lt-2 {margin-bottom: 30px; padding-left: 20px}
+
+footer {padding: 30px 0 60px;}
+  footer #contact {width:520px; float:left;}
+footer p span {color: #36c8ce; text-shadow: 0 -1px 0 #888, 0 1px 0 white;}
+footer .social {float: left; margin-top: 0;}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearself:before,
+.clearself:after {
+  content: " ";    
+  display: block;    
+  height: 0;    
+  overflow: hidden;     
+}
+.clearself:after {clear: both;}
+.clearself {zoom: 1;} /* IE < 8 */
+
+
+
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
